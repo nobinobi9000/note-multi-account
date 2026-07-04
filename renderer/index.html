@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline';">
+  <title>note アカウント切替</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <span class="logo">note.</span>
+    </div>
+
+    <div class="nav-bar">
+      <button id="backBtn"   class="nav-btn" title="戻る">&#8592;</button>
+      <button id="fwdBtn"    class="nav-btn" title="進む">&#8594;</button>
+      <button id="reloadBtn" class="nav-btn" title="再読込">&#8635;</button>
+    </div>
+
+    <div class="copy-url-bar">
+      <button id="copyUrlBtn" class="copy-url-btn" title="現在のページのURLをコピー">
+        <span class="copy-icon">⎘</span>
+        <span class="copy-label">URLをコピー</span>
+      </button>
+      <div class="copy-toast" id="copyToast">コピーしました！</div>
+    </div>
+
+    <div class="accounts-label">アカウント</div>
+    <div class="account-list" id="accountList"></div>
+
+    <div class="sidebar-footer">
+      <!-- 通常時 -->
+      <button class="add-btn" id="addBtn">＋ アカウントを追加</button>
+      <!-- 入力フォーム（インライン） -->
+      <div class="add-form hidden" id="addForm">
+        <input type="text" id="nameInput" placeholder="例：個人用、仕事用" maxlength="20" autocomplete="off">
+        <div class="add-form-btns">
+          <button class="form-cancel" id="cancelBtn">キャンセル</button>
+          <button class="form-ok"     id="okBtn">追加</button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- アカウント未選択時の案内（サイドバー右側に表示） -->
+  <div class="welcome" id="welcome">
+    <div class="welcome-logo">note.</div>
+    <div class="welcome-title">アカウントを追加してください</div>
+    <div class="welcome-desc">
+      左下の「＋ アカウントを追加」をクリックし<br>
+      名前を入力 → note.com が開いたら<br>
+      <strong>Googleアカウントでログイン</strong>するだけです
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

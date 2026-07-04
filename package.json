@@ -1,0 +1,41 @@
+{
+  "name": "note-multi-account",
+  "version": "1.0.0",
+  "description": "note.com マルチアカウント切替アプリ",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win --x64"
+  },
+  "build": {
+    "appId": "com.nobi-labo.note-multi-account",
+    "productName": "note アカウント切替",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "package.json"
+    ],
+    "icon": "assets/icon.ico",
+    "win": {
+      "icon": "assets/icon.ico",
+      "target": [{ "target": "dir", "arch": ["x64"] }]
+    },
+    "portable": {
+      "artifactName": "note-account-switcher-portable.exe"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "note アカウント切替",
+      "artifactName": "note-account-switcher-setup.exe"
+    }
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^25.1.8",
+    "png-to-ico": "^3.0.1",
+    "pngjs": "^7.0.0"
+  }
+}
