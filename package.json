@@ -1,6 +1,6 @@
 {
   "name": "note-multi-account",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "note.com マルチアカウント切替アプリ",
   "main": "main.js",
   "scripts": {

@@ -177,6 +177,41 @@ body {
 
 .account-item.active .account-name { color: #fff; }
 
+.account-name-input {
+  flex: 1;
+  width: 0;
+  min-width: 0;
+  padding: 3px 6px;
+  background: #141414;
+  border: 1px solid #41c9a0;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: inherit;
+  outline: none;
+}
+
+.edit-btn {
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+  color: #555;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: opacity 0.15s, color 0.15s, background 0.15s;
+}
+
+.account-item:hover .edit-btn { opacity: 1; }
+.edit-btn:hover { color: #41c9a0; background: #1a2a24; }
+
 .del-btn {
   opacity: 0;
   width: 20px;
