@@ -6,6 +6,7 @@ contextBridge.exposeInMainWorld('api', {
   deleteAccount: id         => ipcRenderer.invoke('accounts:delete', id),
   renameAccount: (id, name) => ipcRenderer.invoke('accounts:rename', { id, name }),
   navigate:      action     => ipcRenderer.invoke('nav', action),
+  navigateTo:    url        => ipcRenderer.invoke('navigate-to', url),
   copyURL:       ()         => ipcRenderer.invoke('copy-url'),
   onInit:        cb         => ipcRenderer.on('init', (_, data) => cb(data)),
 });

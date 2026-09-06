@@ -166,3 +166,8 @@ ipcMain.handle('copy-url', () => {
   clipboard.writeText(url);
   return url;
 });
+
+ipcMain.handle('navigate-to', (_, url) => {
+  if (!currentId || !viewMap[currentId]) return;
+  viewMap[currentId].webContents.loadURL(url);
+});

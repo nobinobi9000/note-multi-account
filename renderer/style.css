@@ -106,6 +106,36 @@ body {
 
 .copy-toast.show { opacity: 1; }
 
+/* ── ショートカット ── */
+.shortcut-bar {
+  padding: 6px 8px;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.shortcut-btn {
+  width: 100%;
+  padding: 7px 10px;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  color: #666;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  font-family: inherit;
+}
+
+.shortcut-btn:hover {
+  background: #252525;
+  color: #f5a623;
+  border-color: #f5a623;
+}
+
+.shortcut-icon { font-size: 13px; }
+
 .accounts-label {
   font-size: 10px;
   font-weight: 700;

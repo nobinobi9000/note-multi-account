@@ -134,6 +134,11 @@ nameInput.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeForm();
 });
 
+// ── ショートカット ────────────────────────
+document.getElementById('statsBtn').addEventListener('click', () => {
+  if (activeId) window.api.navigateTo('https://note.com/sitesettings/stats');
+});
+
 // ── ナビゲーション ────────────────────────
 document.getElementById('backBtn').addEventListener('click',   () => window.api.navigate('back'));
 document.getElementById('fwdBtn').addEventListener('click',    () => window.api.navigate('forward'));
