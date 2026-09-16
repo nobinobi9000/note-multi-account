@@ -6,9 +6,9 @@ const os = require('os');
 const path = require('path');
 
 // カラー定義
-const BG     = [0x14, 0x14, 0x14]; // #141414 ダーク背景
-const GREEN  = [0x41, 0xc9, 0xa0]; // #41c9a0 note.com グリーン
-const WHITE  = [0xff, 0xff, 0xff]; // #ffffff
+const BG     = [0xff, 0xff, 0xff]; // #ffffff 白背景
+const GREEN  = [0x14, 0x14, 0x14]; // #141414 黒ドット
+const WHITE  = [0x14, 0x14, 0x14]; // #141414 黒の "n"
 
 function inRoundedRect(x, y, size, r) {
   const pad = size * 0.04;
